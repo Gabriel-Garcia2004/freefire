@@ -1,4 +1,4 @@
-<script src="./wp-content/plugins/outside-ffplus/widgets/public/build/bundle.js"></script>
+<script src="./wp-content/plugins/outside-ffplus/public/build/bundle.js"></script>
 
 <?php get_header(); ?>
 <?php global $author;
@@ -147,7 +147,7 @@ $userdata = get_userdata($author); ?>
         <?php } ?>
 
         <div class="mvp-sec-pad left relative" style="height: auto !important;">
-            <script src="./wp-content/plugins/outside-ffplus/widgets/public/build/bundle.js"></script>
+            <script src="./wp-content/plugins/outside-ffplus/public/build/bundle.js"></script>
             <outside-transfers id="16938" url="<?= get_site_url() ?>" />
         </div>
 

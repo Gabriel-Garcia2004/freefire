@@ -1,4 +1,4 @@
-<script src="./wp-content/plugins/outside-ffplus/widgets/public/build/bundle.js"></script>
+<script src="./wp-content/plugins/outside-ffplus/public/build/bundle.js"></script>
 
 <?php get_header(); ?>
 <?php global $author;
@@ -147,8 +147,8 @@ $userdata = get_userdata($author); ?>
         <?php } ?>
 
         <div class="relative" style="height: auto !important; padding: 0px !important">
-            <script src="./wp-content/plugins/outside-ffplus/widgets/public/build/bundle.js"></script>
-            <outside-players id="16938" url="<?= get_site_url() ?>" />
+            <script src="./wp-content/plugins/outside-ffplus/public/build/bundle.js"></script>
+            <outside-players id="16931" url="<?= get_site_url() ?>" />
         </div>
 
         <?php if (!is_singular('scoreboard')) { ?>

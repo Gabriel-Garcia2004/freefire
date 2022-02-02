@@ -7,7 +7,133 @@
   export let url;
   export let id;
 
-  let data;
+  let data = {
+      "player_1": {
+          "statistics": {
+              "kill": "482",
+              "deaths": "12"
+          },
+          "nickname": "Caju",
+          "birthdate": "23/01/2001",
+          "country": "BR",
+          "previous_teams": [
+              {
+                  "team": 16932
+              }
+          ],
+          "current_team": 16932,
+          "tag": 593,
+          "cover": "http://localhost:10018/wp-content/uploads/2021/12/700e203c-93e9-7c00-9a9f-99dfa6d22c5c.jpg"
+      },
+      "player_2": {
+          "statistics": {
+              "kill": "482",
+              "deaths": "12"
+          },
+          "nickname": "Caju",
+          "birthdate": "23/01/2001",
+          "country": "BR",
+          "previous_teams": [
+              {
+                  "team": 16932
+              }
+          ],
+          "current_team": 16932,
+          "tag": 593,
+          "cover": "http://localhost:10018/wp-content/uploads/2021/12/700e203c-93e9-7c00-9a9f-99dfa6d22c5c.jpg"
+      },
+      "player_3": {
+          "statistics": {
+              "kill": "482",
+              "deaths": "12"
+          },
+          "nickname": "Caju",
+          "birthdate": "23/01/2001",
+          "country": "BR",
+          "previous_teams": [
+              {
+                  "team": 16932
+              }
+          ],
+          "current_team": 16932,
+          "tag": 593,
+          "cover": "http://localhost:10018/wp-content/uploads/2021/12/700e203c-93e9-7c00-9a9f-99dfa6d22c5c.jpg"
+      },
+      "player_4": {
+          "statistics": {
+              "kill": "482",
+              "deaths": "12"
+          },
+          "nickname": "Caju",
+          "birthdate": "23/01/2001",
+          "country": "BR",
+          "previous_teams": [
+              {
+                  "team": 16932
+              }
+          ],
+          "current_team": 16932,
+          "tag": 593,
+          "cover": "http://localhost:10018/wp-content/uploads/2021/12/700e203c-93e9-7c00-9a9f-99dfa6d22c5c.jpg"
+      },
+      "coach": {
+          "statistics": {
+              "kill": "482",
+              "deaths": "12"
+          },
+          "nickname": "Caju",
+          "birthdate": "23/01/2001",
+          "country": "BR",
+          "previous_teams": [
+              {
+                  "team": 16932
+              }
+          ],
+          "current_team": 16932,
+          "tag": 593,
+          "cover": "http://localhost:10018/wp-content/uploads/2021/12/700e203c-93e9-7c00-9a9f-99dfa6d22c5c.jpg"
+      },
+      "reservations": [
+          {
+              "statistics": {
+                  "kill": "482",
+                  "deaths": "12"
+              },
+              "nickname": "Caju",
+              "birthdate": "23/01/2001",
+              "country": "BR",
+              "previous_teams": [
+                  {
+                      "team": 16932
+                  }
+              ],
+              "current_team": 16932,
+              "tag": 593,
+              "cover": "http://localhost:10018/wp-content/uploads/2021/12/700e203c-93e9-7c00-9a9f-99dfa6d22c5c.jpg"
+          }
+      ],
+      "shield": "http://localhost:10018/wp-content/uploads/2022/01/StudioOutside_192_192.png",
+      "tag": 593,
+      "hindsight": [
+          {
+              "championship": "LBFF 5",
+              "position": "1"
+          }
+      ],
+      "social": {
+          "facebook": "",
+          "instagram": "",
+          "tiktok": "",
+          "twitter": "",
+          "youtube": "",
+          "twitch": "",
+          "website": ""
+      },
+      "ID": 16932,
+      "name": "Free Agent",
+      "image": "http://localhost:10018/wp-content/uploads/2022/01/xis-og-life.jpg",
+      "tags": 593
+  };
 
   const params = {
     method: "GET",

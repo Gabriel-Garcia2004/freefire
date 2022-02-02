@@ -19,6 +19,7 @@ class TeamsService
 
         $query = get_posts($args);
         $output = array();
+        $output['name'] = get_the_title($id);
 
         foreach ($query as $post) {
             if (has_post_thumbnail($post->ID)) :
@@ -55,6 +56,7 @@ class TeamsService
         $reservations = array();
 
         $fields['ID'] = $id;
+        $fields['name'] = get_the_title($id);
 
         if (has_post_thumbnail($id)) :
             $fields['image'] = wp_get_attachment_url(
@@ -68,8 +70,10 @@ class TeamsService
         $fields['player_4'] = get_fields($fields['player_4']);
         $fields['coach'] = get_fields($fields['coach']);
 
-        foreach ($fields['reservations'] as $player) {
-            array_push($reservations, get_fields($player['player']));
+        if(isset($fields['reservations'])) {
+            foreach ($fields['reservations'] as $player) {
+                array_push($reservations, get_fields($player['player']));
+            }
         }
 
         $fields['reservations'] = $reservations;
