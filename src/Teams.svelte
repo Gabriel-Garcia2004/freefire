@@ -131,28 +131,17 @@
       },
       "ID": 16932,
       "name": "Free Agent",
-      "image": "http://localhost:10018/wp-content/uploads/2022/01/xis-og-life.jpg",
-      "tags": 593
+      "image": "http://localhost:10018/wp-content/uploads/2022/01/xis-og-life.jpg"
   };
 
-  const params = {
-    method: "GET",
-    mode: "cors",
-    cache: "default",
-  };
+  onMount(async () => {
+    const res = await fetch(`/wp-json/outside/v1/team/${id}`);
+    data = await res.json();
 
-  onMount(() => {
-    fetch(`/wp-json/outside/v1/teams/${id}`, params)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (json) {
-        data = json;
-        console.log("data", data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    const posts = await fetch(`/wp-json/wp/v2/posts?tags=${data.tag}`);
+    posts_data = await posts.json();
+
+    console.log('posts_data', posts_data);
   });
 </script>
 
