@@ -1,48 +1,76 @@
+<!-- <svelte:options tag="outside-scoreboard" /> -->
 
 <script>
-    let title = 'Liga de Brasileira de FreeFire';
-    let round = 'Rodada 1';
-    let versus = 'Grupo AxB'
+    // let title = 'Liga de Brasileira de FreeFire';
+    // let round = 'Rodada 1';
+    // let versus = 'Grupo AxB';
+
+//     import { onMount } from "svelte";
+
+// export let url;
+// export let id;
+
+// let data;
+
+// const params = {
+//   method: "GET",
+//   mode: "cors",
+//   cache: "default",
+// };
+
+// onMount(() => {
+//   fetch(`/wp-json/outside/v1/match/${id}`, params)
+//     .then(function (response) {
+//       return response.json();
+//     })
+//     .then(function (json) {
+//       data = json;
+//       console.log('data', data);
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+// });
     </script>
     
     <section class="scoreContainer">
         <div class="score">
-            <p class="score__title">{title}</p>
+            <p class="score__title">eu</p>
             <img class="score__img--stream" src="https://3.bp.blogspot.com/-SKceO6XYeUY/WDu1bUycFQI/AAAAAAAATgE/4vb1VFxiAQcK8Nx5aLIdqq3GSYn0Vdb7gCLcB/s1600/pesquisar-ou-encontrar-transmiss%25C3%25B5es-ao-vivo-no-youtube.gif" alt="Ao vivo">
             <img src="https://www.freefiremania.com.br/images/intz.jpg" alt="placar de Partida FreeFire" class="score__img">
             <div class="score__textBox">
-                <p class="score__text">{round}</p>
-                <p class="score__text">{versus}</p>
+                <p class="score__text">eu</p>
+                <p class="score__text">eu</p>
             </div>
            
         </div>
         <div class="score">
-            <p class="score__title">{title}</p>
+            <p class="score__title">eu</p>
             <img class="score__img--stream" src="https://3.bp.blogspot.com/-SKceO6XYeUY/WDu1bUycFQI/AAAAAAAATgE/4vb1VFxiAQcK8Nx5aLIdqq3GSYn0Vdb7gCLcB/s1600/pesquisar-ou-encontrar-transmiss%25C3%25B5es-ao-vivo-no-youtube.gif" alt="Ao vivo">
             <img src="https://www.freefiremania.com.br/images/intz.jpg" alt="placar de Partida FreeFire" class="score__img">
             <div class="score__textBox">
-                <p class="score__text">{round}</p>
-                <p class="score__text">{versus}</p>
+                <p class="score__text">eu</p>
+                <p class="score__text">eu</p>
             </div>
            
         </div>
         <div class="score">
-            <p class="score__title">{title}</p>
+            <p class="score__title">eu</p>
             <img class="score__img--stream" src="https://3.bp.blogspot.com/-SKceO6XYeUY/WDu1bUycFQI/AAAAAAAATgE/4vb1VFxiAQcK8Nx5aLIdqq3GSYn0Vdb7gCLcB/s1600/pesquisar-ou-encontrar-transmiss%25C3%25B5es-ao-vivo-no-youtube.gif" alt="Ao vivo">
             <img src="https://www.freefiremania.com.br/images/intz.jpg" alt="placar de Partida FreeFire" class="score__img">
             <div class="score__textBox">
-                <p class="score__text">{round}</p>
-                <p class="score__text">{versus}</p>
+                <p class="score__text">eu</p>
+                <p class="score__text">eu</p>
             </div>
            
         </div>
         <div class="score">
-            <p class="score__title">{title}</p>
+            <p class="score__title">eu</p>
             <img class="score__img--stream" src="https://3.bp.blogspot.com/-SKceO6XYeUY/WDu1bUycFQI/AAAAAAAATgE/4vb1VFxiAQcK8Nx5aLIdqq3GSYn0Vdb7gCLcB/s1600/pesquisar-ou-encontrar-transmiss%25C3%25B5es-ao-vivo-no-youtube.gif" alt="Ao vivo">
             <img src="https://www.freefiremania.com.br/images/intz.jpg" alt="placar de Partida FreeFire" class="score__img">
             <div class="score__textBox">
-                <p class="score__text">{round}</p>
-                <p class="score__text">{versus}</p>
+                <p class="score__text">eu</p>
+                <p class="score__text">eu</p>
             </div>
            
         </div>
