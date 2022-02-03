@@ -148,7 +148,9 @@ $userdata = get_userdata($author); ?>
 
         <div class="mvp-sec-pad left relative" style="height: auto !important;">
             <script src="./wp-content/plugins/outside-ffplus/public/build/bundle.js"></script>
-            <outside-transfers id="16938" url="<?= get_site_url() ?>" />
+
+            <outside-scoreboard> </outside-scoreboard>
+            <outside-transfers> </outside-transfers>
         </div>
 
         <?php if (!is_singular('scoreboard')) { ?>

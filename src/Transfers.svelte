@@ -1,178 +1,90 @@
 <svelte:options tag="outside-transfers" />
 
 <script>
-  // import Fa from "svelte-fa/src/fa.svelte";
-
-  // import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons";
-  let team = "Nobru";
-  let team2 = "Fechou";
   import { onMount } from "svelte";
 
-export let url;
-export let id;
+  let data = [
+      {
+          ID: 16936,
+          player: {
+              nickname: "Caju",
+              image: "http://localhost:10018/wp-content/uploads/2022/01/juninxl-god.jpg"
+          },
+          de: {
+              ID: 16932,
+              name: "Free Agent",
+              shield: "http://localhost:10018/wp-content/uploads/2022/01/StudioOutside_192_192.png"
+          },
+          para: {
+              ID: 16932,
+              name: "Free Agent",
+              shield: "http://localhost:10018/wp-content/uploads/2022/01/StudioOutside_192_192.png"
+          },
+          status: "fechou",
+          source: "https://google.com",
+          date: "13/01/2022"
+      }
+  ];
 
-let data;
+  onMount(async () => {
+    const res = await fetch(`/wp-json/outside/v1/transfers`);
+    data = await res.json();
 
-const params = {
-  method: "GET",
-  mode: "cors",
-  cache: "default",
-};
-
-onMount(() => {
-  fetch(`/wp-json/outside/v1/transfers/${id}`, params)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (json) {
-      data = json;
-      console.log('data', data);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
+    console.log(data)
+  });
 </script>
 
 <section class="capaMarket">
-  <!-- <a href="./Scoreboard.svelte" target="_blank" rel="noopener noreferrer">eu</a> -->
   <ul class="capaMarket__container">
-    <li class="capaMarket__user">
-      <div class="capaMarket__player">
-        <div class="capaMarket__userName">
-          <img
-            src="https://static.xx.fbcdn.net/rsrc.php/v1/yi/r/odA9sNLrE86.jpg"
-            alt="Foto da Equipe - FreeFire"
-            class="capaMarket__userImage"
-          />
-          <p class="capaMarket__userText">{team}</p>
+    {#each data as transfer}
+      <li class="capaMarket__user">
+        <div class="capaMarket__player">
+          <div class="capaMarket__userName">
+            <img
+              src={transfer.player.image}
+              alt="Foto da Equipe - FreeFire"
+              class="capaMarket__userImage"
+            />
+            <p class="capaMarket__userText">
+              {transfer.player.nickname}
+            </p>
+          </div>
         </div>
-        <img
-          src="https://www.freefiremania.com.br/images/intz.jpg"
-          alt="Foto da Equipe - FreeFire"
-          class="capaMarket__userImageTeam"
-        />
-      </div>
-      <!-- <Fa
-        icon={faAngleDoubleRight}
-        color="#ff6900"
-        style="font-weight: 900"
-        size="4em"
-      /> -->
 
-      <div class="capaMarket__player">
-        <img
-          src="https://www.freefiremania.com.br/images/vivo-keyd.jpg"
-          alt="Foto da Equipe - FreeFire"
-          class="capaMarket__userImageTeam"
-        />
-        <div class="capaMarket__userName">
-          <p class="capaMarket__userText">{team2}</p>
-        </div>
-      </div>
-    </li>
-    <li class="capaMarket__user">
-      <div class="capaMarket__player">
-        <div class="capaMarket__userName">
+        <div class="capaMarket__player">
           <img
-            src="https://static.xx.fbcdn.net/rsrc.php/v1/yi/r/odA9sNLrE86.jpg"
-            alt="Foto da Equipe - FreeFire"
-            class="capaMarket__userImage"
+            src={transfer.de.shield}
+            alt={transfer.de.name}
+            class="capaMarket__userImageTeam"
           />
-          <p class="capaMarket__userText">{team}</p>
-        </div>
-        <img
-          src="https://www.freefiremania.com.br/images/intz.jpg"
-          alt="Foto da Equipe - FreeFire"
-          class="capaMarket__userImageTeam"
-        />
-      </div>
-      <!-- <Fa
-        icon={faAngleDoubleRight}
-        color="#ff6900"
-        style="font-weight: 900"
-        size="4em"
-      /> -->
+          
+          <div>
+            <!--
+              TODO:
+                Usar ícones em ocasiões:
+                  Fechou: hands-helping
+                  Renovou: sync-alt
+                  Negociando: business-time
+                  Rumor: comment
+                  Reserva: check-double
+            -->
+            {transfer.status}
+          </div>
 
-      <div class="capaMarket__player">
-        <img
-          src="https://www.freefiremania.com.br/images/vivo-keyd.jpg"
-          alt="Foto da Equipe - FreeFire"
-          class="capaMarket__userImageTeam"
-        />
-        <div class="capaMarket__userName">
-          <p class="capaMarket__userText">{team2}</p>
-        </div>
-      </div>
-    </li>
-    <li class="capaMarket__user">
-      <div class="capaMarket__player">
-        <div class="capaMarket__userName">
           <img
-            src="https://static.xx.fbcdn.net/rsrc.php/v1/yi/r/odA9sNLrE86.jpg"
-            alt="Foto da Equipe - FreeFire"
-            class="capaMarket__userImage"
+            src={transfer.para.shield}
+            alt={transfer.para.name}
+            class="capaMarket__userImageTeam"
           />
-          <p class="capaMarket__userText">{team}</p>
         </div>
-        <img
-          src="https://www.freefiremania.com.br/images/intz.jpg"
-          alt="Foto da Equipe - FreeFire"
-          class="capaMarket__userImageTeam"
-        />
-      </div>
-      <!-- <Fa
-        icon={faAngleDoubleRight}
-        color="#ff6900"
-        style="font-weight: 900"
-        size="4em"
-      /> -->
-
-      <div class="capaMarket__player">
-        <img
-          src="https://www.freefiremania.com.br/images/vivo-keyd.jpg"
-          alt="Foto da Equipe - FreeFire"
-          class="capaMarket__userImageTeam"
-        />
-        <div class="capaMarket__userName">
-          <p class="capaMarket__userText">{team2}</p>
+        <div>
+          Data: {transfer.date}
         </div>
-      </div>
-    </li>
-    <li class="capaMarket__user">
-      <div class="capaMarket__player">
-        <div class="capaMarket__userName">
-          <img
-            src="https://static.xx.fbcdn.net/rsrc.php/v1/yi/r/odA9sNLrE86.jpg"
-            alt="Foto da Equipe - FreeFire"
-            class="capaMarket__userImage"
-          />
-          <p class="capaMarket__userText">{team}</p>
-        </div>
-        <img
-          src="https://www.freefiremania.com.br/images/intz.jpg"
-          alt="Foto da Equipe - FreeFire"
-          class="capaMarket__userImageTeam"
-        />
-      </div>
-      <!-- <Fa
-        icon={faAngleDoubleRight}
-        color="#ff6900"
-        style="font-weight: 900"
-        size="4em"
-      /> -->
-
-      <div class="capaMarket__player">
-        <img
-          src="https://www.freefiremania.com.br/images/vivo-keyd.jpg"
-          alt="Foto da Equipe - FreeFire"
-          class="capaMarket__userImageTeam"
-        />
-        <div class="capaMarket__userName">
-          <p class="capaMarket__userText">{team2}</p>
-        </div>
-      </div>
-    </li>
+        <a href="{transfer.source}">
+          Ref.
+        </a>
+      </li>
+    {/each}
   </ul>
 </section>
 

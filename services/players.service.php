@@ -49,7 +49,9 @@ class PlayerService
             );
         endif;
 
-        $output += get_fields($id);
+        if (get_fields($id)) {
+            $output += get_fields($id);
+        }
         
         $current_time = TeamsService::getTeam($output['current_team']);
         $output['current_team'] = array(
@@ -60,7 +62,7 @@ class PlayerService
         
         $previus_teams = array();
 
-        foreach($output['previous_teams'] as $previous) {
+        if($output['previous_teams']) {
             $prev_team = TeamsService::getTeam($previous['team']);
             array_push($previus_teams, array(
                 'ID' => $prev_team['ID'],

@@ -145,19 +145,22 @@
   });
 </script>
 
+<!-- TODO: Deve exibir a imagem data.image na Capa do Perfil -->
 <section class="teams">
   <div class="background">
     <img
       clas="teams__img"
-      src="https://i.imgur.com/3iS2RZG.png"
+      src={data.shield}
       alt="Foto time Freefire"
     />
   </div>
   <div class="teams__icons">
     <h2 class="teams__title">
-      {teamName}
+      {data.name}
     </h2>
   </div>
+
+  <!-- TODO: Preencher com imagem dos Jogadores (se possível, nome) -->
   <div class="teams__box">
     <div class="teams__container" />
     <div class="teams__container" />
@@ -166,6 +169,10 @@
     <div class="teams__container" />
     <div class="teams__container" />
   </div>
+
+  <!-- TODO: Listar trajetórir em data.hindsight -->
+
+  <!-- TODO: Listar data_posts como Notícias -->
 </section>
 
 <style>
